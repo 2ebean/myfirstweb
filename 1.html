@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>나를 소개합니다</title>
+        <meta charset="utf-8">
+        <style>
+            h1 {
+                text-align: center; border-width: 5px;
+                border-color: red; border-style: solid;
+                padding: 20px; margin: 20px;
+            }
+            img {
+                border-width: 4px; border-color: black;
+                border-style: solid;
+            }
+            a {
+                color:aqua; text-decoration: overline;
+            }
+            .g {
+                color:green; text-decoration: none;
+            }
+            #s {
+                color:blue; text-decoration: underline;
+            }
+            div {
+                border: 5px solid gray;
+                display: grid;
+                grid-template-columns: 100px 1fr;
+            }
+            #gri {
+                border: 5px solid pink ;
+            }
+            @media(max-width:700px){
+                #gri{
+                    display: none;
+                }
+            }
+        </style>
+    </head>
+    <body>
+
+        <h1>저를 소개합니다</h1><br>
+        <h4>이름 : 이빈</h4>
+        자기소개글
+
+        <div id="gri">
+            <div>qwertyuiop</div>
+            <div>asdfghjkl</div>
+        </div>
+
+        <h4>출신 학교</h4>
+
+        <ol>
+            <li><a href="http://seorim.icees.kr/" class="g" id="s">서림 초등학교</a></li><br>
+            <img src="서림.png" width="200">
+            <li><a href="http://igy.icems.kr/" class="g">경연 중학교</a></li><br>
+            <img src="경연.jpeg" width="200">
+            <li><a href="http://cheongra.icehs.kr/">청라 고등학교</a></li><br>
+            <img src="청라.jpeg" width="200">
+        </ol>
+
+        <input type="button" value="day" onclick="
+        if(document.querySelector('body').dataset.mode === 'night'){
+            document.querySelector('body').style.backgroundColor = 'white'
+            document.querySelector('body').style.color = 'black'
+            document.querySelector('body').dataset.mode = 'day'
+            this.value = 'day'
+        }
+        else{
+            document.querySelector('body').style.backgroundColor = 'black'
+            document.querySelector('body').style.color = 'white'
+            document.querySelector('body').dataset.mode = 'night'
+            this.value = 'night'
+        }">
+    </body>
+</html>
